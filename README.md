@@ -133,12 +133,12 @@ public void handle(ActionEvent actionEvent) {
     - to reduce duplicate code and make it easier to understand.
 
 ```java
-public void alert(Alert.AlertType setAlertType, String setTitle, String setHeaderText, String setContentText) {
+public void alert(Alert.AlertType alertType, String title, String header, String message) {
     Alert alert = new Alert(Alert.AlertType.NONE);
-    alert.setAlertType(setAlertType);
-    alert.setTitle(setTitle);
-    alert.setHeaderText(setHeaderText);
-    alert.setContentText(setContentText);
+    alert.setAlertType(alertType);
+    alert.setTitle(title);
+    alert.setHeaderText(header);
+    alert.setContentText(message);
     alert.showAndWait();
 }
 
@@ -250,9 +250,9 @@ public Label text;
 .
 .
 .
-public void text(String setStyle, String setText) {
-    text.setStyle(setStyle);
-    text.setText(setText);
+public void text(String style, String text) {
+    text.setStyle(style);
+    text.setText(text);
 }
 
 class ChooseDragonHandler implements EventHandler<ActionEvent> {
